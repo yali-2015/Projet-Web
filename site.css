@@ -1,0 +1,101 @@
+@charset "UTF-8"; 
+#global{
+	border:1px solid:#ADC4CE;
+	background-color:#ADC4CE;
+	
+}
+#header
+{
+	border: 1px solid #ADC4C0;
+	background: #8494a3;
+	height: 80px;
+	margin: 5px;
+	padding: 5px;
+	text-align: center;
+	color: #FFFFFF;
+}
+#navigation
+{ text-align: center;
+}
+
+#contenu
+{
+	border: 0px solid #195B00;	
+	background: #ADC4CE;
+	padding: 5px; margin: 5px;
+	min-height: 675px;
+}
+#left
+{
+	border: 0px solid #195B78;
+	background: #ADC4CE;
+	width: 200px;
+	min-height: 675px;
+	float: left;
+	text-align: left;
+	
+}
+#right
+{
+	border: 1px solid #BF040F; 
+	background: #ADC4CE;
+	min-height: 675px;
+	margin-left: 160px;
+	overflow: auto;
+}
+
+#footer
+{
+	border: 1px solid #CO13D2; background: #39434d;
+	bottom: 20px;
+	left: 2px;
+	right: 2px;
+	text-align: center;
+	min-height: 100px;
+	overflow: auto;
+	color: #FFFFFF;
+}
+
+hr
+{
+background-color: white;
+height: 7px;
+}
+
+img{
+width: 70%;
+height:50%;
+tesxt-align : center;
+margin: auto;
+
+
+}
+p
+{
+tesxt-align: center;
+}
+
+
+
+
+
+body
+{
+background-color:#ADC4CE;
+tesxt-align: center;
+}
+
+hr
+{
+background-color: white;
+height: 6px;
+}
+
+h1{ text-align: center;}
+div
+{ text-align: center;
+margin: auto;
+}
+
+
+</style>  
