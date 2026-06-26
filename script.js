@@ -1,29 +1,31 @@
-// Initialisation du tableau des clients
-if (!localStorage.getItem("clients")) {
-    localStorage.setItem("clients", JSON.stringify([]));
-}
+const formulaire = document.getElementById("formulaire");
 
-// Affiche le nombre de clients
-function afficherNombreClients() {
-    const clients = JSON.parse(localStorage.getItem("clients")) || [];
-    document.getElementById("nombreClients").textContent = clients.length;
-}
+formulaire.addEventListener("submit", function(e) {
 
-// Ajoute un client fictif pour tester
-function inscrire() {
-    const clients = JSON.parse(localStorage.getItem("clients")) || [];
+    e.preventDefault();
 
-    const nouveauClient = {
-        id: Date.now(),
-        nom: "Client " + (clients.length + 1)
+    const inscription = {
+        nom: document.getElementById("nom").value,
+        prenom: document.getElementById("prenom").value,
+        email: document.getElementById("email").value,
+        téléphon: document.getElementBYID("téléphone").value,
+        
     };
 
-    clients.push(nouveauClient);
+    let inscriptions =
+        JSON.parse(localStorage.getItem("inscriptions")) || [];
 
-    localStorage.setItem("clients", JSON.stringify(clients));
+    inscriptions.push(inscription);
 
-    afficherNombreClients();
-}
+    localStorage.setItem(
+        "inscriptions",
+        JSON.stringify(inscriptions, null, 2)
+    );
 
-// Affichage au chargement de la page
-afficherNombreClients();
+    alert("Inscription enregistrée !");
+
+    formulaire.reset();
+
+});
+
+console.log(JSON.parse(localStorage.getItem("inscriptions")));
